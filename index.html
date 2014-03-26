@@ -1,7 +1,30 @@
 <html>
-<head><title>Testing</title></head>
+<head><title>Express Demo</title>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  });
+</script>
+</head>
 <body>
-<a href="iphone.html">iPhone Demo</a><br/>
-<a href="ipad.html">iPad Demo</a>
+<div style="padding:20px 20px 20px 20px">
+<img src="mindbody-logo.png"/>
+</div><br/>
+<div id="accordion">
+  <h3>iPhone</h3>
+  <div>
+	<iframe src="https://app.io/MFZp88?orientation=portrait&device=iphone5" height="607px" width="291px" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+  </div>
+  <h3>iPad</h3>
+  <div>
+	<iframe src="https://app.io/MFZp88?orientation=landscape&device=ipadmini" height="600px" width="882px" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+  </div>
+</div>
+
 </body>
 </html>
