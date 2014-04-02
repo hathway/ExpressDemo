@@ -3,25 +3,42 @@
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-<script type="text/javascript">
+<script>
   $(function() {
-    $( "#accordion" ).accordion({
-      collapsible: true
-    });
+    $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
   });
-</script>
+  </script>
+  <style>
+  .ui-tabs-vertical { width: 70em; }
+  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 8em; }
+  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+  .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
+  .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 58em;}
+  </style>
 </head>
 <body>
 <div style="padding:20px 20px 20px 20px">
 <img src="mindbody-logo.png"/>
 </div><br/>
-<div id="accordion">
-  <h3>iPhone</h3>
-  <div>
+<div id="tabs">
+  <ul>
+	<li><a href="#tabs-iphone">iPhone 4</a></li>
+	<li><a href="#tabs-iphone5">iPhone 5</a></li>
+	<li><a href="#tabs-ipad">iPad</a></li>
+	<li><a href="#tabs-ipadmini">iPad Mini</a></li>
+  </ul>
+  <div id="tabs-iphone">
+	<iframe src="https://app.io/MFZp88?orientation=portrait&device=iphone" height="607px" width="320px" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+  </div>
+  <div id="tabs-iphone5">
 	<iframe src="https://app.io/MFZp88?orientation=portrait&device=iphone5" height="607px" width="291px" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
   </div>
-  <h3>iPad</h3>
-  <div>
+  <div id="tabs-ipad">
+	<iframe src="https://app.io/MFZp88?orientation=landscape&device=ipad" height="600px" width="642px" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+  </div>
+  <div id="tabs-ipadmini">
 	<iframe src="https://app.io/MFZp88?orientation=landscape&device=ipadmini" height="600px" width="882px" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
   </div>
 </div>
